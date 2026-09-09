@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, ArrowUpRight } from "lucide-react";
+import { Mail, ArrowUpRight, GraduationCap, MapPin } from "lucide-react";
 
 const GithubIcon = ({ size = 15, ...props }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" {...props}>
@@ -50,7 +50,7 @@ const data = {
       stack: ["HTML", "CSS", "JavaScript"],
       summary: "Personal profile and practice repository.",
       details:
-        "First try portfolio inside of my GitHub repository. I use plain HTML,CSS and JavaScript.",
+        "First try portfolio inside of my GitHub repository. I use plain HTML and CSS.",
       link: "https://github.com/jrames15/jramesmonton",
     },
     {
@@ -127,6 +127,61 @@ export default function Portfolio() {
           border-radius: 2px;
         }
 
+        .pf-hero {
+          position: relative;
+        }
+
+        .pf-hero::before {
+          content: '';
+          position: absolute;
+          left: -24px;
+          top: 62px;
+          bottom: 70px;
+          width: 2px;
+          background: linear-gradient(${tokens.accent}, transparent);
+          opacity: 0.7;
+        }
+
+        .pf-education {
+          display: grid;
+          grid-template-columns: auto 1fr;
+          gap: 12px;
+          align-items: start;
+          max-width: 520px;
+          margin-top: 32px;
+          padding: 16px 18px;
+          border: 1px solid ${tokens.border};
+          border-radius: 8px;
+          background: linear-gradient(110deg, ${tokens.surface}, transparent);
+        }
+
+        .pf-education-icon {
+          display: grid;
+          place-items: center;
+          width: 32px;
+          height: 32px;
+          color: ${tokens.bg};
+          background: ${tokens.accent};
+          border-radius: 50%;
+        }
+
+        .pf-education-school {
+          margin-top: 5px;
+          color: ${tokens.text};
+          font-family: 'Space Grotesk', sans-serif;
+          font-size: 15px;
+          line-height: 1.4;
+        }
+
+        .pf-location {
+          display: inline-flex;
+          align-items: center;
+          gap: 5px;
+          margin-top: 8px;
+          color: ${tokens.muted};
+          font-size: 12px;
+        }
+
         .pf-row {
           border-top: 1px solid ${tokens.border};
           cursor: pointer;
@@ -151,6 +206,7 @@ export default function Portfolio() {
 
         @media (max-width: 640px) {
           .pf-hero-name { font-size: 2.4rem !important; }
+          .pf-hero::before { left: -12px; top: 42px; bottom: 64px; }
           .pf-row-inner { flex-direction: column !important; align-items: flex-start !important; gap: 6px !important; }
           .pf-row-year { display: none !important; }
         }
@@ -176,7 +232,7 @@ export default function Portfolio() {
         </nav>
 
         {/* Hero */}
-        <header style={{ padding: "64px 0 72px" }}>
+        <header className="pf-hero" style={{ padding: "64px 0 72px" }}>
           <h1
             className="pf-display pf-hero-name"
             style={{
@@ -211,6 +267,22 @@ export default function Portfolio() {
           >
             {data.profile.tagline}
           </p>
+
+          <div className="pf-education">
+            <span className="pf-education-icon" aria-hidden="true">
+              <GraduationCap size={17} strokeWidth={2} />
+            </span>
+            <div>
+              <div className="pf-mono" style={{ color: tokens.muted, fontSize: 11 }}>
+                EDUCATION
+              </div>
+              <div className="pf-education-school">{data.profile.school}</div>
+              <div className="pf-location">
+                <MapPin size={13} strokeWidth={1.75} />
+                {data.profile.location}
+              </div>
+            </div>
+          </div>
 
           <div style={{ display: "flex", gap: 20, marginTop: 32 }}>
             {data.profile.socials.map(({ label, url, Icon }) => (
