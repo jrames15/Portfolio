@@ -36,7 +36,7 @@ const data = {
     {
       id: "01",
       title: "Plant Growth Tracker",
-      year: "2026",
+      year: "2025",
       stack: ["PHP", "MySQL"],
       summary: "A PHP system for tracking plant growth with a login system.",
       details:
@@ -46,7 +46,7 @@ const data = {
     {
       id: "02",
       title: "jramesmonton",
-      year: "2026",
+      year: "2025",
       stack: ["HTML", "CSS", "JavaScript"],
       summary: "Personal profile and practice repository.",
       details:
@@ -66,7 +66,7 @@ const data = {
   {
     id: "04",
     title: "Weather App",
-    year: "2025",
+    year: "2026",
     stack: ["HTML", "CSS", "JavaScript", "API"],
     summary: "A weather application that fetches data from a public API.",
     details:
