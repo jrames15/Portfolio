@@ -67,7 +67,7 @@ const data = {
     id: "04",
     title: "My first E-Portfolio",
     year: "2026",
-    stack: ["HTML", "CSS", "JavaScript", "API"],
+    stack: ["HTML", "CSS", "JavaScript"],
     summary: "A weather application that fetches data from a public API.",
     details:
       "A front-end project that uses JavaScript to fetch and display weather data from a public API. It demonstrates asynchronous programming and DOM manipulation.",
