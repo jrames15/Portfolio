@@ -68,7 +68,7 @@ const data = {
     title: "My first E-Portfolio",
     year: "2026",
     stack: ["HTML", "CSS", "JavaScript"],
-    summary: "A weather application that fetches data from a public API.",
+    summary: "E-Portfolio in my work immersion.",
     details:
       "A front-end project that uses JavaScript to fetch and display weather data from a public API. It demonstrates asynchronous programming and DOM manipulation.",
     link: "https://github.com/jrames15/E-PORTFOLIO-2"
