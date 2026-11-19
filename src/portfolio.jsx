@@ -21,6 +21,7 @@ const data = {
       "Beginner web developer with an NCII certificate, building one project at a time.",
     location: "Pagadian City, Zamboanga del Sur, PH",
     school: "JH Cerilles State College - Pagadian City Campus",
+    school: "Zamboanga del Sur National High School",
     email: "jamesrheinm@gmail.com",
     socials: [
       { label: "GitHub", handle: "jrames15", url: "https://github.com/jrames15", Icon: GithubIcon },
